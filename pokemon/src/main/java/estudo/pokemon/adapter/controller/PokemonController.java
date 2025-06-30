@@ -1,5 +1,6 @@
 package estudo.pokemon.adapter.controller;
 
+import estudo.pokemon.usecase.GetPokemonUseCase;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
