@@ -25,5 +25,4 @@ public class PokemonController {
                 .map(ResponseEntity::ok) // Retonra 200 OK com o corpo do pokemon
                 .orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).build()); // Se não encontrou, retorna 404 Not found.
     }
-
 }
