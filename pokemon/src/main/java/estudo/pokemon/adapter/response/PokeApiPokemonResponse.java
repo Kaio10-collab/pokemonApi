@@ -1,4 +1,4 @@
-package estudo.pokemon.adapter.entrypoint.response;
+package estudo.pokemon.adapter.response;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
