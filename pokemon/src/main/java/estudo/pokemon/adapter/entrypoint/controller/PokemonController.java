@@ -1,4 +1,4 @@
-package estudo.pokemon.adapter.controller;
+package estudo.pokemon.adapter.entrypoint.controller;
 
 import estudo.pokemon.usecase.GetPokemonUseCase;
 import org.springframework.http.HttpStatus;

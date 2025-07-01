@@ -1,4 +1,4 @@
-package estudo.pokemon.dataprovider.config;
+package estudo.pokemon.adapter.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

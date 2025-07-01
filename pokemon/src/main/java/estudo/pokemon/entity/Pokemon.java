@@ -1,4 +1,4 @@
-package estudo.pokemon.domain.entity;
+package estudo.pokemon.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

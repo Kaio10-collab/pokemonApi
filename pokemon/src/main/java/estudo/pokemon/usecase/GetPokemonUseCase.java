@@ -1,7 +1,7 @@
 package estudo.pokemon.usecase;
 
-import estudo.pokemon.domain.entity.Pokemon;
-import estudo.pokemon.domain.repository.PokemonRepositoryPort;
+import estudo.pokemon.entity.Pokemon;
+import estudo.pokemon.usecase.gateway.PokemonRepositoryPort;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
