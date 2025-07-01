@@ -1,6 +1,6 @@
-package estudo.pokemon.domain.repository;
+package estudo.pokemon.usecase.gateway;
 
-import estudo.pokemon.domain.entity.Pokemon;
+import estudo.pokemon.entity.Pokemon;
 
 import java.util.Optional;
 
