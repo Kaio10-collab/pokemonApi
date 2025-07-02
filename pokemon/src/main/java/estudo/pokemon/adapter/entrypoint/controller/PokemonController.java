@@ -2,6 +2,7 @@ package estudo.pokemon.adapter.entrypoint.controller;
 
 import estudo.pokemon.adapter.entrypoint.response.PokemonResponse;
 import estudo.pokemon.usecase.GetPokemonUseCase;
+import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,14 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController // Aqui vamos indicar que essa classe aqui é um controlador REST
 @RequestMapping("/pokemon") // Iremos definir o caminho base para todos os endpoints nesta classe
+@AllArgsConstructor  // Criaremos uma injeção de dependência do caso de uso
 public class PokemonController {
 
     private final GetPokemonUseCase useCase;
-
-    // Criaremos uma injeção de dependência do caso de uso
-    public PokemonController(GetPokemonUseCase useCase) {
-        this.useCase = useCase;
-    }
 
     @GetMapping("/{name}") // vamos mapear as requisições GET para /pokemon/{name}
     public ResponseEntity<PokemonResponse> getPokemonByName(@PathVariable String name) { // Vamos extrair o valor da url e o injeta no parâmetro name no método
