@@ -8,5 +8,5 @@ import java.util.Optional;
 public interface PokemonRepositoryPort {
 
     Optional<Pokemon> getPokemonByName(String name);
-    // Optei por colocar um Optional para lidar com a possibilidade de que o pok[emon não ser encontrado
+    // Optei por colocar um Optional para lidar com a possibilidade de que o pokémon não ser encontrado
 }

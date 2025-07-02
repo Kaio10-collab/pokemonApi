@@ -3,6 +3,7 @@ package estudo.pokemon.adapter.dataprovider;
 import estudo.pokemon.adapter.response.PokeApiPokemonResponse;
 import estudo.pokemon.entity.Pokemon;
 import estudo.pokemon.usecase.gateway.PokemonRepositoryPort;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.reactive.function.client.WebClientResponseException;
@@ -12,17 +13,13 @@ import java.util.List;
 import java.util.Optional;
 
 @Component // Vamos marcar essa classe para ser um componente do Spring
+@AllArgsConstructor // injeção de dependência do WebClient configurado, permitindo que o adaptador o utilize para fazer as requisições ou qualquer classe
 public class PokeApiDataProvider implements PokemonRepositoryPort {
 
     /*
     Aqui vamos implementar a lógica do método da interface
     */
     private final WebClient webClient;
-
-    // injeção de dependência do WebClient configurado, permitindo que o adaptador o utilize para fazer as requisições
-    public PokeApiDataProvider(WebClient pokeApiWebClient) {
-        this.webClient = pokeApiWebClient;
-    }
 
     @Override
     public Optional<Pokemon> getPokemonByName(String name) {
